@@ -1,3 +1,74 @@
+# ALIAS
+c.aliases = {
+    'q'                         : 'quit',
+    'wq'                        : 'quit --save',
+    'w'                         : 'session-save',
+    'Facebook'                  : 'open https://www.facebook.com/',
+    'GitHub'                    : 'open https://www.github.com/elhackerlibre/',
+    'Google'                    : 'open https://www.google.com/',
+    'MeWe'                      : 'open https://www.mewe.com/',
+    'tFacebook'                 : 'open -t https://www.facebook.com/',
+    'tGitHub'                   : 'open -t https://www.github.com/elhackerlibre/',
+    'tGoogle'                   : 'open -t https://www.google.com/',
+    'tMeWe'                     : 'open -t https://www.mewe.com/',
+}
+
+# SHORTCUT KEYBOARD
+# Bindings
+config.unbind("f")
+config.unbind("o")
+config.unbind("<ctrl+shift+w>")
+
+config.bind("<ctrl+a>", "config-source")
+config.bind("<ctrl+b>", "back")
+config.bind("<ctrl+c>", "close")
+config.bind("<ctrl+f>", "forward")
+config.bind("<ctrl+g>", "open -t https://www.google.com/")
+config.bind("<ctrl+m>", "bookmark-add")
+
+# CONTENTS
+# Encoding:
+c.content.default_encoding          = 'utf-8'
+# Language:
+c.content.headers.accept_language   = 'es-ES,es'
+# Style sheets:
+c.content.user_stylesheets          = "~/.config/qutebrowser/user.css"
+
+# DOWNLOADS
+c.downloads.location.directory      = '~/Descargas'
+c.downloads.position                = 'bottom'
+
+
+# EDITORS
+c.editor.command                    = ["termite", "-e", "vim '{}'"]
+c.editor.encoding                   = "utf-8"
+
+
+# FONTS
+c.fonts.monospace                   = "xos4 Terminus"
+c.fonts.downloads                   = "12px xos4 Terminus"
+c.fonts.messages.error              = "12px xos4 Terminus"
+c.fonts.messages.info               = "12px xos4 Terminus"
+c.fonts.statusbar                   = "12px xos4 Terminus"
+c.fonts.tabs                        = "13px xos4 Terminus"
+
+# OTHERS
+# Save session:
+c.auto_save.session                 = True
+
+c.qt.force_software_rendering       = 'chromium'
+c.window.title_format               = "{private}{perc}{title}{title_sep}qutebrowser"
+
+# START PAGE
+c.url.default_page                  = "about:blank"
+c.url.start_pages                   = "https://www.google.com/"
+c.url.searchengines                 = {"DEFAULT": "https://www.google.co.ve/search?q={}"}
+
+# TABS / STATUSBAR
+c.tabs.padding                      = {'bottom': 6, 'left': 6, 'right': 6, 'top': 6,}
+c.statusbar.padding                 = {'bottom': 6, 'left': 6, 'right': 6, 'top': 6,}
+#==================================#
+
 # THEME:
 # base16-qutebrowser (https://github.com/theova/base16-qutebrowser)
 # Base16 qutebrowser template by theova
@@ -251,3 +322,4 @@ c.colors.tabs.selected.even.bg = base05
 # Background color for webpages if unset (or empty to use the theme's
 # color).
 # c.colors.webpage.bg = base00
+
